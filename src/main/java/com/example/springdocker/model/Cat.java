@@ -1,10 +1,16 @@
 package com.example.springdocker.model;
 
-/**
- * Created by Jacaranda Perez
- * Date: 2021-05-11
- * Project: spring-docker-demo
- */
 
-public class Car {
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Cat {
+    String id;
+    String name;
+    String color;
+    String type;
 }
