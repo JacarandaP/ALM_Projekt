@@ -9,6 +9,7 @@ import java.util.List;
 
 @Repository
 public interface CatRepository extends MongoRepository <Cat, Long> {
+
     List<Cat> findCatByType(String type);
 
 

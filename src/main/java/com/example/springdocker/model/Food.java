@@ -12,4 +12,5 @@ public class Food {
     String name;
     boolean delicious;
     boolean canICookIt;
+
 }
