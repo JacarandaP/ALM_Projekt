@@ -47,6 +47,9 @@ class FoodRepositoryTest {
         List<Food> actualListFoodICanCook = foodRepository.findFoodByCanICookIt(true);
 
         assertEquals(Arrays.asList(food1,food3), actualListFoodICanCook);
+        assertEquals(food1.getName(), actualListFoodICanCook.get(0).getName());
+        assertEquals(food3.getName(), actualListFoodICanCook.get(1).getName());
+
     }
 
 }

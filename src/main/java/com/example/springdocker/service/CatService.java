@@ -17,8 +17,8 @@ public class CatService {
         return catRepository.findAll();
     }
 
-    public void saveNewCat(Cat cat) {
-        catRepository.save(cat);
+    public Cat saveNewCat(Cat cat) {
+        return catRepository.save(cat);
     }
 
     public List<String> getCatsOfType(String type) {
