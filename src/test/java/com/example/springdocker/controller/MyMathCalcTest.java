@@ -38,8 +38,8 @@ class MyMathCalcTest {
  @Test
  @DisplayName("Testing divide method")
     public void divideTest(){
-        float expected = 20/3;
-        float actual = myMathCalc.divide(20, 3);
+        double expected = 20/3;
+        double actual = myMathCalc.divide(20, 3);
 
         assertEquals(expected, actual);
 
