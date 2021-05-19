@@ -22,10 +22,15 @@ services:
             - mongo
 
 
-  #  spring-demo:
-   #     image: spring-demo
-    #    ports:
-     #     - 8080
-      #  depends_on:
-       #   - mongo-db
+    spring-demo:
+        image: spring-demo
+        ports:
+          - "8085:8085"
+        depends_on:
+          - mongo
+        environment:
+          - SPRING_DATA_MONGODB_HOST=mongo
+          - SPRING_DATA_MONGODB_PORT=27017
+          - SPRING_DATA_MONGODB_DATABASE=my-mongodb
+          - SPRING_DATA_MONGODB_AUTHENTICATION-DATABASE=admin
 
