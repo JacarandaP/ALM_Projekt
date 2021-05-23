@@ -5,32 +5,17 @@ services:
         image: mongo:latest
         container_name: mongo-server
         ports:
-          - "27017:27017"
-        environment:
-          MONGO_INITDB_ROOT_USERNAME: root
-          MONGO_INITDB_ROOT_PASSWORD: password
+          - 27017:27017
 
     mongo-express:
         image: mongo-express
         ports:
           - 8081:8081
-        environment:
-          ME_CONFIG_MONGODB_SERVER: mongo-server
-          ME_CONFIG_MONGODB_ADMINUSERNAME: root
-          ME_CONFIG_MONGODB_ADMINPASSWORD: password
+
         depends_on:
             - mongo
 
 
-    spring-demo:
-        image: spring-demo
-        ports:
-          - "8085:8085"
-        depends_on:
-          - mongo
-        environment:
-          - SPRING_DATA_MONGODB_HOST=mongo
-          - SPRING_DATA_MONGODB_PORT=27017
-          - SPRING_DATA_MONGODB_DATABASE=my-mongodb
-          - SPRING_DATA_MONGODB_AUTHENTICATION-DATABASE=admin
+
+
 

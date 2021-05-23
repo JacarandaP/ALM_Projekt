@@ -20,7 +20,7 @@ public class FoodController {
         return service.getFoods();
     }
 
-    @PostMapping("/foods")
+    @PostMapping("/savefood")
     public void saveNewFood(@RequestBody Food food) {
         service.saveNewFood(food);
     }
