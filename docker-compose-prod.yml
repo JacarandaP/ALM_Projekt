@@ -16,6 +16,7 @@ services:
       - mongo
 
   spring-demo:
+    build: .
     image: spring-demo
     ports:
             - "8085:8080"
@@ -23,6 +24,6 @@ services:
       SPRING_PROFILES_ACTIVE: prod
       DB_HOST: mongo
       DB_PORT: 27017
-      DB_NAME: db-prod
+      DB_NAME: db-pro
     depends_on:
       - mongo
